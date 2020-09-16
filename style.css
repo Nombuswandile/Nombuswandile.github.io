@@ -1,0 +1,694 @@
+@import url(href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet");
+@keyframes buttonColor{
+	0%{margin-top: 10%;}
+	25%{margin-top: -10%;}
+	50%{margin-top: 15%;}
+	75%{ margin-top:-15%;}
+	100%{margin-top: 10%}
+}
+*{
+	font-family: 'Raleway', sans-serif;
+}
+header{
+	text-align: center;
+	background-image: url('images/blue cake.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	height: 350px;
+}
+.gradient{
+	color:white;/* rgb(255, 166, 77);*/
+	height: 320px;
+	background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+	padding: 40px 20px 0px 20px;
+	font-size: 15px;
+	text-shadow: 2px 2px 2px black;
+}
+.contacts{
+	display: none;
+}
+
+.hello {
+	text-align: center;
+	/*padding: 10px;*/
+	margin-top: 15px;
+	font-size: 18px;
+	/*background-color: rgb(0,29,71, 0.8);/*rgb(196, 136, 143);*/
+	color: white;
+	background: url('images/chocolate cake2.jpg');
+	background-attachment:fixed;
+	background-position:top;
+	background-size:cover;
+	/*height: 250px;*/
+}
+.hello p{
+	background: rgb(0,0,0, 0.7);
+	padding: 40px;
+	/*height: 210px;*/
+}
+main div{
+	margin-bottom: 10px;
+}
+.cake1{
+	text-align: center;
+	font-size: 17px;
+	background-color: pink;
+	padding: 10px;
+}
+main p{
+	text-align: center;
+	font-size: 17px;
+}
+.cake2{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(137, 85, 64, 0.7);
+	padding: 10px;
+}
+.cake3{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(227, 186, 14, 0.7);
+	padding: 10px;
+}
+.cake4{
+	text-align: center;
+	font-size: 17px;
+	background-color: none;
+	border:1px solid black;
+	padding: 10px;
+}
+.cake5{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(115, 56, 31, 0.7);
+	padding: 10px;
+}
+.cake6{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(253, 205, 195 ,0.7);
+	padding: 10px;
+	padding-bottom: 20px;
+}
+.cake7{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(244, 203, 173, 0.7);
+	padding: 10px;
+	padding-bottom: 20px;
+}
+.cake8{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(255, 192, 203, 0.5);
+	padding: 10px;
+	padding-bottom: 20px;
+}
+.cake9{
+	text-align: center;
+	font-size: 17px;
+	background-color: rgb(87, 55, 42, 0.7);
+	padding: 10px;
+	padding-bottom: 20px;
+}
+main a{
+	color: rgb(117, 53, 54);
+}
+footer{
+	text-align: center;
+	font-size: 17px;
+	color: white;
+	background-color: black;
+	padding: 5px;
+	/*width: 100%;*/
+}
+footer a{
+	color: rgb(117, 53, 54);
+}
+.end{
+	padding: 20px;
+}
+.end p{
+	width: 95%; 
+}
+.contacts-footer{
+    display: block;
+   	margin-top: 5%;
+    margin-left: 3%;
+}
+.contacts-footer ul li{
+    list-style-type: none;
+    float: left;
+}
+.contacts-footer ul li a img{
+    height: 30px;
+    background:#fff;
+    margin:15px;
+    border-radius: 50% 0% 55% 0%; 
+}
+a:hover{
+	color: pink;
+	text-shadow: 2px 2px 2px black;
+}
+
+
+
+@media only screen and (min-width:956px){ /* there is a flaw at about 840px landscape*/
+	header{
+		text-align: none;
+	    background-image: url('images/blue cake2.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: top;
+	    height: 700px;
+	    margin-bottom: 0px;
+	}
+	.gradient{
+	    color:white;/* rgb(255, 166, 77);*/
+	    height: 450px;
+	    background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0, 0.4));
+	    padding: 250px 20px 0px 20px;
+	    text-shadow: 2px 2px 2px black;
+    }
+    .gradient button{
+	    background-color: rgb(255, 166, 77);/*change this*/
+	    margin-top:10%;
+	    height: 30px;
+	    animation-name: buttonColor;
+	    animation-duration: 5s;
+	    animation-iteration-count: infinite;
+    }
+    .contacts{
+    	display: block;
+    	margin-top: 5%;
+	    margin-left: 39%;
+    }
+    .contacts ul li{
+	    list-style-type: none;
+	    float: left;
+    }
+    .contacts ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    margin:20px;
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    .hello {
+     	text-align: center;
+	    /*padding: 10px;*/
+	    margin-top:15px;
+	    font-size: 18px;
+	    background-color: rgb(0,29,71, 0.7);/*rgb(196, 136, 143);*/
+	    color: white;
+	    background: url('images/chocolate cake3.jpg');
+	    background-attachment:fixed;
+	    background-position:top;
+	    background-size:cover;
+	    height: 250px;
+    }
+    .hello p{
+	    background: rgb(0,0,0, 0.7);
+	    font-size:18px;
+	    padding:100px; 
+	    height: 50px; 
+    }
+    /*main div{
+	    margin-bottom: 10px;
+    }*/
+    .flex1{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex1 div{
+	    margin: 10px;
+     }
+    /**.float{
+    	background: white;
+    	border: 1px black solid;
+    	width: 3%;
+    	height: 70px;
+    	float: right;
+
+    	delete this class on the HTML as well
+    }*/
+    .flex2{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex2 div{
+	    margin: 10px;
+     }
+     .flex3{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex3 div{
+	    margin: 10px;
+     }
+    .flex4{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex4 div{
+	    margin: 10px;
+     }
+    .cake1{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: pink;
+	    padding: 20px;
+    }
+    .cake1 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    main p{
+	    text-align: center;
+	    font-size: 17px;
+   }
+   .cake2{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(137, 85, 64);
+	    padding: 20px;
+    }
+    .cake2 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake3{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(227, 186, 14);
+	    padding: 20px;
+    }
+    .cake3 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake4{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: white;
+	    border:1px solid black;
+	    padding: 20px;
+    }
+    .cake4 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake5{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(115, 56, 31);
+	    padding: 20px;
+    }
+    .cake5 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake6{
+	    text-align: center;
+	    font-size: 17px;
+  	    background-color: rgb(253, 205, 195);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake6 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake7{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(244, 203, 173);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake7 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake8{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(255, 192, 203, 0.5);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake8 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cake9{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(87, 55, 42);
+	    padding: 20px;
+	    padding-bottom: 20px;
+	    width: 45%;
+	    margin-left: 25%;
+    }
+    .cake9 p{
+    	float: left;
+    	margin-top: 120px;
+    	width: 50%;
+    }
+    .cakes{
+    	width: 48%;
+    	height: 320px;
+    }
+    main img{
+    	height: 300px;
+    	min-height: 100px;
+    }
+main a{
+	color: rgb(117, 53, 54);
+}
+footer{
+	text-align: center;
+	font-size: 17px;
+	color: white;
+	background-color: black;
+	padding: 5px;
+	/*width: 100%;*/
+}
+footer a{
+	color: rgb(117, 53, 54);
+}
+.contacts-footer{
+    	display: block;
+    	margin-top: 5%;
+	    margin-left: 27%;
+    }
+    .contacts-footer ul li{
+	    list-style-type: none;
+	    float: left;
+    }
+    .contacts-footer ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    margin:20px;
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    .end{
+	    padding: 20px;
+    }
+    .end p{
+	    width: 95%; 
+    }
+    a:hover{
+	    color: pink;
+	    text-shadow: 5px 5px 0px black;
+    }
+
+}
+
+
+
+
+@media only screen and (min-width:768px) and (max-width: 955px){ /* there is a flaw at about 840px landscape*/
+	header{
+		text-align: none;
+	    background-image: url('images/blue cake2.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: top;
+	    height: 700px;
+	    margin-bottom: 0px;
+	}
+	.gradient{
+	    color:white;/* rgb(255, 166, 77);*/
+	    height: 450px;
+	    background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0, 0.4));
+	    padding: 250px 20px 0px 20px;
+	    text-shadow: 2px 2px 2px black;
+    }
+    .gradient button{
+	    background-color: rgb(255, 166, 77);/*change this*/
+	    margin-top:10%;
+	    height: 30px;
+	    animation-name: buttonColor;
+	    animation-duration: 5s;
+	    animation-iteration-count: infinite;
+    }
+    .contacts{
+    	display: block;
+    	margin-top: 5%;
+	    margin-left: 27%;
+    }
+    .contacts ul li{
+	    list-style-type: none;
+	    float: left;
+    }
+    .contacts ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    margin:20px;
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    .hello {
+     	text-align: center;
+	    /*padding: 10px;*/
+	    margin-top:15px;
+	    font-size: 18px;
+	    background-color: rgb(0,29,71, 0.7);/*rgb(196, 136, 143);*/
+	    color: white;
+	    background: url('images/chocolate cake3.jpg');
+	    background-attachment:fixed;
+	    background-position:top;
+	    background-size:cover;
+	    height: 250px;
+    }
+    .hello p{
+	    background: rgb(0,0,0, 0.7);
+	    font-size:18px;
+	    padding:100px; 
+	    height: 50px; 
+    }
+    /*main div{
+	    margin-bottom: 10px;
+    }*/
+    .flex1{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex1 div{
+	    margin: 10px;
+     }
+    /**.float{
+    	background: white;
+    	border: 1px black solid;
+    	width: 3%;
+    	height: 70px;
+    	float: right;
+
+    	delete this class on the HTML as well
+    }*/
+    .flex2{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex2 div{
+	    margin: 10px;
+     }
+     .flex3{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex3 div{
+	    margin: 10px;
+     }
+    .flex4{
+    	margin-top: 10px;
+	    display: flex;
+	    flex: wrap;
+	    justify-content: space-around;
+    }
+    .flex4 div{
+	    margin: 10px;
+     }
+    .cake1{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: pink;
+	    padding: 20px;
+    }
+    .cake1 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    main p{
+	    text-align: center;
+	    font-size: 17px;
+   }
+   .cake2{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(137, 85, 64);
+	    padding: 20px;
+    }
+    .cake2 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake3{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(227, 186, 14);
+	    padding: 20px;
+    }
+    .cake3 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake4{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: white;
+	    border:1px solid black;
+	    padding: 20px;
+    }
+    .cake4 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake5{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(115, 56, 31);
+	    padding: 20px;
+    }
+    .cake5 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake6{
+	    text-align: center;
+	    font-size: 17px;
+  	    background-color: rgb(253, 205, 195);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake6 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake7{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(244, 203, 173);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake7 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake8{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(255, 192, 203, 0.5);
+	    padding: 20px;
+	    padding-bottom: 20px;
+    }
+    .cake8 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cake9{
+	    text-align: center;
+	    font-size: 17px;
+	    background-color: rgb(87, 55, 42);
+	    padding: 20px;
+	    padding-bottom: 20px;
+	    width: 45%;
+	    margin-left: 25%;
+    }
+    .cake9 p{
+    	float: none;
+    	margin-left: 25%;
+    	width: 50%;
+    }
+    .cakes{
+    	width: 48%;
+    	height: 570px;
+    }
+    main img{
+    	height: 300px;
+    	min-height: 100px;
+    }
+    main a{
+	    color: rgb(117, 53, 54);
+    }
+    .end{
+    	padding: 20px;
+    }
+    .end p{
+    	width:95%;
+    }
+
+    footer{
+	    text-align: center;
+	    font-size: 17px;
+	    color: white;
+	    background-color: black;
+	    padding: 5px;
+	    /*width: 100%;*/
+    }
+    footer a{
+	    color: rgb(117, 53, 54);
+    }
+    .contacts-footer{
+    	display: block;
+    	margin-top: 5%;
+	    margin-left: 27%;
+    }
+    .contacts-footer ul li{
+	    list-style-type: none;
+	    float: left;
+    }
+    .contacts-footer ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    margin:20px;
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    a:hover{
+	    color: pink;
+	    text-shadow: 2px 2px 2px black;
+    }
+
+}

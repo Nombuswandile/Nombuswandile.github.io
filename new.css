@@ -16,7 +16,7 @@
 	50%{opacity: 1}
 	60%{opacity: 1}
 	/*70%{width: 7.5%}*/
-	100%{opacity: 0}
+	100%{opacity: 1}
 }
 
 *{
@@ -69,19 +69,26 @@ header .gradient .container{
 .change .bar3{
 	transform: rotate(45deg) translate(-8px, -8px);
 }
-.icons{
+.container  ul{
 	margin-left: 0%;
-	margin-top:-195px; /*40*/
+	margin-top:-195px; /*40px*/
 	transition: 0.5s ease;
 	position: absolute;
 	width: 10%;
 }
-.icons li{
+.icons{
+	margin-left: 0%;
+	margin-top:40px !important; /*-195px*/
+	transition: 0.5s ease;
+	position: absolute;
+	width: 10%;
+}
+#icons li{
 	list-style-type: none;
 	width: 10%;
 	margin-left:-930%;
 }
-.icons li img{
+#icons li img{
 	height: 30px;
 	border: 1px solid black;
 	border-radius: 50%;
@@ -113,28 +120,76 @@ header .gradient .container{
 	background: rgb(0,0,0,0.7);
 	padding: 40px;
 	text-align: center;
-	font-size: 17px;
-	/*height: 210px;*/
+    font-size: 17px;
+    line-height: 25px;
+	
 }
 .first-cakes{
 	background-color: rgb(185, 122, 86);
 	align-content: center;
 	height: 375px;
+	box-sizing: border-box;
 }
 .special-container{
 	border:25px solid rgb(185, 122, 86);
 	padding: 0px;
-	background: url('images/chocolate cake3.jpg');
+	/*background: url('images/chocolate cake3.jpg');*/
+	background: rgb(185, 122, 86);
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	display: grid;
+	grid-template-columns: 10% auto 10%;
+}
+.special-container-button1{
+	background:none;
+	height: 50px;
+	width:50px;
+	margin-top:140px;
+	border-radius: 50% 0% 0% 50%;
+}
+.special-container-button2{
+	background:none;
+	height: 50px;
+	width:50px;
+	margin-top:140px;
+	margin-left:0px;
+	border-radius: 0% 50% 50% 0%;
+}
+.button1-special{
+	display: block;
+	background:none;
+	border-left: 2px white solid;
+	border-bottom: 2px white solid;
+	margin-left: 10%;
+	margin-top: 12px;
+	height:20px;
+	width:20px;
+	transform: rotate(45deg);
+	justify-content: center;
+	
+}
+.button2-special{
+	display: block;
+	background:none;
+	border-left: 2px white solid;
+	border-bottom: 2px white solid;
+	/*margin-left: -9%;*/
+	margin-top: 12px;
+	height:20px;
+	width:20px;
+	transform: rotate(-135deg);
+	justify-content: center;
+	
 }
 .special{
-	animation-name: opacity;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
+	/*animation-name: opacity;*/
+	/*animation-duration: 5s;*/
+	/*animation-iteration-count: 1;*/
 	/*margin:0px;*/
+	border:1px solid rgb(102, 78, 70);
+	box-shadow: 1px 1px 1px black;
 	width: 100%;
 	
 }
@@ -153,14 +208,17 @@ header .gradient .container{
 	margin-left: 2%;
 	width: 95%; 
 }
-.second-cakes div{
-	margin-left: 2%;
+.second-cakes  div{
+    /*margin-left: 2%;*/
+    display: grid;
+    justify-content: center;
 }
 .second-cakes img{
-	margin-left: 5%;
+	/*margin-left: 5%;*/
 	background-color: rgb(0,0,0, 0.7);
 	padding: 5px;
-	margin-bottom: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
 }
 
 main p{
@@ -175,12 +233,21 @@ footer{
 	text-align: center;
 	font-size: 17px;
 	color: white;
-	background-color: black;
+	background-color: white;
 	padding: 5px;
 	/*width: 100%;*/
 }
+footer > p{
+    background-color: black;
+    padding: 10px;
+}
 footer a{
 	color: rgb(117, 53, 54);
+}
+#footer-call{
+	list-style-type: none;
+	text-decoration:underline;
+	color:white;
 }
 .end{
 	padding: 20px;
@@ -189,24 +256,33 @@ footer a{
 	width: 95%; 
 }
 .contacts-footer{
+   
     display: block;
    	margin-top: 5%;
-    margin-left: 3%;
+    /*margin-left: 3%;*/
+    align-content: center;
+    padding: 0px;
+}
+.contacts-footer ul{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    padding: 0px;
+    /*grid-template-columns: 25% 25% 25% 25%;*/
 }
 .contacts-footer ul li{
     list-style-type: none;
-    float: left;
+    /*float: left;*/
 }
 .contacts-footer ul li a img{
     height: 30px;
     background:#fff;
-    margin:15px;
+    /*margin:15px;*/
     border-radius: 50% 0% 55% 0%; 
 }
 .contacts-footer ul li img{ /*the phone icon*/
     height: 30px;
     background:#fff;
-    margin:15px;
+    /*margin:15px;*/
     border-radius: 50% 0% 55% 0%; 
 }
 a:hover{
@@ -216,202 +292,12 @@ a:hover{
 
 
 
-@media only screen and (min-width:956px){ /* there is a flaw at about 840px landscape*/
-	header{
-		text-align: none;
-	    background-image: url('images/blue cake2.jpg');
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    background-position: top;
-	    height: 700px;
-	    margin-bottom: 10px;
-	}
-	.gradient{
-	    color:white;/* rgb(255, 166, 77);*/
-	    height: 450px;
-	    background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0, 0.4));
-	    padding: 250px 20px 0px 20px;
-	    text-shadow: 2px 2px 2px black;
-    }
-    .icons, #ham{
-    	display: none;
-    }
-    .gradient button{
-	    background-color: rgb(255, 166, 77);/*change this*/
-	    margin-top:10%;
-	    height: 30px;
-	    animation-name: buttonColor;
-	    animation-duration: 5s;
-	    animation-iteration-count: infinite;
-    }
-    .contacts{
-    	display: block;
-    	margin-top: 5%;
-	    margin-left: 35%;
-    }
-    .contacts ul li{
-	    list-style-type: none;
-	    float: left;
-    }
-    .contacts ul li a img{
-	    height: 50px;
-	    background:#fff;
-	    margin:20px;
-	    border-radius: 50% 0% 55% 0%; 
-    }
-    .cover{
-    	 background-color: rgb(185, 122, 86);
-    	 padding-top: 5px;
-    }
-    .hello {
-     	text-align: center;
-	    /*padding: 10px;*/
-	    margin-top:15px;
-	    margin-left: 15%;
-	    font-size: 18px;
-	    color: white;
-	    background:none;/* url('images/chocolate cake3.jpg');*/
-	    /*border-radius:5px;
-	    background-attachment:fixed;
-	    background-position:top;
-	    background-size:cover;*/
-	    width:70%;
-	    height: 250px;
-    }
-    .hello p{
-	    background:rgb(185, 122, 86);/*rgb(0,0,0, 0.7);*/
-	    text-shadow: 2px 2px 2px black;
-	    border-radius:5px;
-	    font-size:18px;
-	    padding:40px; 
-	    margin-top: 0px;
-	    margin-bottom: 0px; 
-	    height: 109px; 
-    }
-    .first-cakes{
-    	/*display: flex;
-    	flex: wrap;*/
-    	padding-bottom:40px; 
-    	margin-left: 15%;
-    	margin-top: -90px;
-    	margin-bottom: 0px;
-    	width: 80%;
-    	height: 350px;
-    }
-    .special-container{
-    	display: none;
-    }
-    .special{
-    	display: none;
-	    animation-name: none;
-	    animation-duration: 5.2s;
-	    animation-iteration-count: infinite;
-	    margin: 0%;
-	    border:none;
-	    background-color: rgb(185, 122, 86);
-	    padding: 0px;
-	    /*height: 100px;*/ 
-    }
-
-    .Mobile-none{
-    	margin-top: -10px;
-	    display: inline;
-    }
-    .first-cakes img{
-    	border: 7px solid black;
-    	border-radius: 3px;
-    	box-shadow: 10px 10px 12px rgb(0,0,0, 0.7);
-    	width: 17%;
-    	height: 250px;
-    }
-    .second-cakes{
-    	color: white;
-    	background-color: rgb(102, 78, 70);
-    	padding-top:20px;
-    	padding-bottom: 2%;
-    	margin-top: -11px; 
-    	height: 620px;
-    }
-    .second-cakes p{
-    	margin-left: 15%;
-    	margin-bottom: 50px;
-    	font-size: 18px;
-    	text-shadow: 2px 2px 2px black;
-    	width: 70%;
-    }
-    .second-cakes div{
-    	margin-left: 22%;
-    }
-    .second-cakes img{
-    	background-color: rgb(0,0,0, 0.7);
-    	padding: 10px;
-    	margin-left: 50px;
-    	margin-bottom: 2%;
-    	width: 25%;
-    }
-    
-
-   /* main p{
-	    text-align: center;
-	    font-size: 17px;
-   }
-   
-    main img{
-    	height: 300px;
-    	min-height: 100px;
-    }
-main a{
-	color: rgb(117, 53, 54);
-}
-footer{
-	text-align: center;
-	font-size: 17px;
-	color: white;
-	background-color: black;
-	padding: 5px;
-	/*width: 100%;*/
-/*}
-footer a{
-	color: rgb(117, 53, 54);
-}
-.contacts-footer{
-    	display: block;
-    	margin-top: 5%;
-	    margin-left: 27%;
-    }
-    .contacts-footer ul li{
-	    list-style-type: none;
-	    float: left;
-    }
-    .contacts-footer ul li a img{
-	    height: 50px;
-	    background:#fff;
-	    margin:20px;
-	    border-radius: 50% 0% 55% 0%; 
-    }
-    .contacts-footer ul li img{
-	    height: 50px;
-	    background:#fff;
-	    margin:20px;
-	    border-radius: 50% 0% 55% 0%; 
-    }
-    .end{
-	    padding: 20px;
-    }
-    .end p{
-	    width: 95%; 
-    }
-    a:hover{
-	    color: pink;
-	    text-shadow: 5px 5px 0px black;
-    }*/
-
-}
 
 
 
 
-@media only screen and (min-width:768px) and (max-width: 955px){ /* there is a flaw at about 840px landscape*/
+
+@media only screen and (min-width:1200px){ /* there is a flaw at about 840px landscape*/
 	header{
 		text-align: none;
 	    background-image: url('images/blue cake2.jpg');
@@ -423,12 +309,16 @@ footer a{
 	}
 	.gradient{
 	    color:white;/* rgb(255, 166, 77);*/
-	    height: 450px;
-	    background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0, 0.4));
+		height: 450px;
+		background:rgb(0,0,0,0.1);
+		background: -webkit-linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+		background: -moz-linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+		background: -o-linear-gradient(to bottom, rgb(0,0,0,0.1), rgba(0, 0, 0));
+		background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
 	    padding: 250px 20px 0px 20px;
 	    text-shadow: 2px 2px 2px black;
     }
-    .icons, #ham{
+    .icons, #ham, #icons{
     	display: none;
     }
     .gradient button{
@@ -442,7 +332,13 @@ footer a{
     .contacts{
     	display: block;
     	margin-top: 5%;
-	    margin-left: 27%;
+        margin-left: 27%;
+        margin-right: 27%;
+    }
+    .contacts ul{
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        padding: 0px;
     }
     .contacts ul li{
 	    list-style-type: none;
@@ -451,13 +347,15 @@ footer a{
     .contacts ul li a img{
 	    height: 50px;
 	    background:#fff;
-	    margin:20px;
+	    /*margin:20px;*/
 	    border-radius: 50% 0% 55% 0%; 
     }
    
     .cover{
-    	 background-color: rgb(185, 122, 86);
-    	 padding-top: 5px;
+    	/* background-color: rgb(185, 122, 86);*/
+		 padding-top: 5px;
+		 padding-left: 0px;
+		 padding-right: 0px;
     }
     .hello {
      	text-align: center;
@@ -482,17 +380,27 @@ footer a{
 	    padding:40px; 
 	    margin-top: 0px;
 	    margin-bottom: 0px; 
-	    height: 109px; 
+        height: 109px; 
+        line-height: 25px;
     }
     .first-cakes{
     	/*display: flex;
     	flex: wrap;*/
-    	padding-bottom:40px; 
-    	margin-left: 8%;
-    	margin-top: -30px;
-    	margin-bottom: 0px;
-    	width: 90%;
-    	height: 350px;
+    	padding-bottom:70px; 
+    	margin-top: -60px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right:0px;
+        padding-left: 0px;
+        box-sizing: border-box;
+    	width: 100%;
+        height: 350px;
+        display: grid;
+		grid-template-columns: 25% 25% 25% auto;
+		justify-content: center;
     }
     .special-container{
     	display: none;
@@ -517,16 +425,23 @@ footer a{
     	border: 7px solid black;
     	border-radius: 3px;
     	box-shadow: 10px 10px 12px rgb(0,0,0, 0.7);
-    	width: 16%;
-    	height: 240px;
+    	width: 80%;
+    	height: 190px;
     }
     .second-cakes{
+        box-sizing: border-box;
     	color: white;
     	background-color: rgb(102, 78, 70);
     	padding-top:20px;
     	padding-bottom: 5%;
-    	margin-top: -11px; 
+        margin-top: -11px; 
     	height: 620px;
+    }
+    .second-cakes .cakes{
+        display: grid;
+        grid-template-columns: 50% auto;
+        justify-content: center;
+        margin-left:0px;
     }
     .second-cakes p{
     	margin-left: 15%;
@@ -541,9 +456,8 @@ footer a{
     .second-cakes img{
     	background-color: rgb(0,0,0, 0.7);
     	padding: 10px;
-    	margin-left: 50px;
     	margin-bottom: 2%;
-    	width: 35%;
+    	height:340px;
     }
     
     main a{
@@ -560,17 +474,30 @@ footer a{
 	    text-align: center;
 	    font-size: 17px;
 	    color: white;
-	    background-color: black;
+	    background-color: white;
 	    padding: 5px;
 	    /*width: 100%;*/
     }
     footer a{
 	    color: rgb(117, 53, 54);
     }
+    footer p{
+        background-color: black;
+        padding:20px;
+	}
+	#footer-call{
+		list-style-type: none;
+		text-decoration:underline;
+		color:white;
+	}
     .contacts-footer{
     	display: block;
     	margin-top: 5%;
-	    margin-left: 27%;
+	    /*margin-left: 27%;*/
+    }
+    .contacts-footer ul{
+        display: grid;
+        grid-template-columns:33% 34% 33%;
     }
     .contacts-footer ul li{
 	    list-style-type: none;
@@ -579,13 +506,13 @@ footer a{
     .contacts-footer ul li a img{
 	    height: 50px;
 	    background:#fff;
-	    margin:20px;
+	    /*margin:20px;*/
 	    border-radius: 50% 0% 55% 0%; 
     }
     .contacts-footer ul li img{
 	    height: 50px;
 	    background:#fff;
-	    margin:20px;
+	    /*margin:20px;*/
 	    border-radius: 50% 0% 55% 0%; 
     }
     a:hover{
@@ -595,78 +522,243 @@ footer a{
 
 }
 
-
-@media only screen and (min-width: 319px) and (max-width: 758px){
-	.gradient h1{
-		text-align: center;
-		background-color: none;
-		margin-left: 25%;
-    	width: 55%;
+@media only screen and (min-width:768px) and (max-width:1199px){ /* there is a flaw at about 840px landscape*/
+	header{
+		text-align: none;
+	    background-image: url('images/blue cake2.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: top;
+	    height: 700px;
+	    margin-bottom: 0px;
+	}
+	.gradient{
+	    color:white;/* rgb(255, 166, 77);*/
+	    height: 450px;
+		background:rgb(0,0,0,0.1);
+		background: -webkit-linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+		background: -moz-linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+		background: -o-linear-gradient(to bottom, rgb(0,0,0,0.1), rgba(0, 0, 0));
+		background:linear-gradient(to bottom, rgb(0,0,0,0.1), rgb(0,0,0));
+	    padding: 250px 20px 0px 20px;
+	    text-shadow: 2px 2px 2px black;
     }
-    .icons{
-	    margin-left: 45%;
-     	margin-top:-195px; /*40*/
-	    transition: 0.5s ease;
-	    position: absolute;
-  	    width: 10%;
+    .icons, #ham, #icons{
+    	display: none;
     }
-    .icons li{
+    .gradient button{
+	    background-color: rgb(255, 166, 77);/*change this*/
+	    margin-top:10%;
+	    height: 30px;
+	    animation-name: buttonColor;
+	    animation-duration: 5s;
+	    animation-iteration-count: infinite;
+    }
+    .contacts{
+    	display: block;
+    	margin-top: 5%;
+        margin-left: 27%;
+        margin-right: 27%;
+    }
+    .contacts ul{
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        padding: 0px;
+    }
+    .contacts ul li{
 	    list-style-type: none;
-	    width: 10%;
-     	margin-left:-995%;
+	    float: left;
+    }
+    .contacts ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    /*margin:20px;*/
+	    border-radius: 50% 0% 55% 0%; 
+    }
+   
+    .cover{
+    	/* background-color: rgb(185, 122, 86);*/
+		 padding-top: 5px;
+		 padding-left:0px;
+		 padding-right:0px;
+    }
+    .hello {
+     	text-align: center;
+	    /*padding: 10px;*/
+	    margin-top:15px;
+	    margin-left: 15%;
+	    font-size: 18px;
+	    color: white;
+	    background:none;/* url('images/chocolate cake3.jpg');*/
+	    /*border-radius:5px;
+	    background-attachment:fixed;
+	    background-position:top;
+	    background-size:cover;*/
+	    width:70%;
+	    height: 250px;
+    }
+    .hello p{
+	    background:rgb(185, 122, 86);/*rgb(0,0,0, 0.7);*/
+	    text-shadow: 2px 2px 2px black;
+	    border-radius:5px;
+	    font-size:18px;
+	    padding:40px; 
+	    margin-top: 0px;
+	    margin-bottom: 0px; 
+        height: 109px; 
+        line-height: 25px;
+    }
+    .first-cakes{
+    	/*display: flex;
+		flex: wrap;*/
+		box-sizing: border-box;
+    	padding-bottom:70px; 
+    	margin-top: -60px;
+        margin-bottom: 0px;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right:0px;
+        padding-left: 0px;
+    	width: 100%;
+        height: 350px;
+        display: grid;
+		grid-template-columns: 23% 24% 24% auto;
+		justify-content: center;
+    }
+    .special-container{
+    	display: none;
+    }
+    .special{
+    	display: none;
+	    animation-name: none;
+	    animation-duration: 5.2s;
+	    animation-iteration-count: infinite;
+	    margin: 0%;
+	    border:none;
+	    background-color: rgb(185, 122, 86);
+	    padding: 0px;
+	    /*height: 100px;*/ 
+    }
+
+    .Mobile-none{
+    	margin-top:-10px;
+	    display: inline;
+    }
+    .first-cakes img{
+    	border: 7px solid black;
+    	border-radius: 3px;
+    	box-shadow: 10px 10px 12px rgb(0,0,0, 0.7);
+    	width:80%;
+    	height: 120px;
     }
     .second-cakes{
+        box-sizing: border-box;
     	color: white;
-    	background-color:rgb(102, 78, 70);
+    	background-color: rgb(102, 78, 70);
     	padding-top:20px;
-    	padding-bottom: 15%;
-    	/*padding-left: 340px;*/
-    	margin-top: -11px; 
-    	/*height: 985px;*/
+    	padding-bottom: 5%;
+        margin-top: -11px; 
+    	height: 620px;
+    }
+    .second-cakes .cakes{
+        display: grid;
+        grid-template-columns: 50% auto;
+        justify-content: center;
+        margin-left:0px;
     }
     .second-cakes p{
-    	/*margin-left: 15%;*/
-    	margin-bottom: 40px;
+    	margin-left: 15%;
+    	margin-bottom: 50px;
     	font-size: 18px;
     	text-shadow: 2px 2px 2px black;
-    	/*width: 70%;*/
+    	width: 70%;
     }
     .second-cakes div{
-    	/*display: flex;
-    	flex: wrap;*/
-    	margin-top: 0px;
-    	margin-left: 17%;
+    	margin-left: 7%;
     }
     .second-cakes img{
     	background-color: rgb(0,0,0, 0.7);
     	padding: 10px;
     	/*margin-left: 50px;*/
     	margin-bottom: 2%;
-    	width:60%;/* 150px;*/
-    	/*max-width: 200px;*/
+    	/*width: 35%;*/
     }
-   /* .contacts-footer{
+    
+    main a{
+	    color: rgb(117, 53, 54);
+    }
+    .end{
+    	padding: 20px;
+    }
+    .end p{
+    	width:95%;
+    }
+
+    footer{
+	    text-align: center;
+	    font-size: 17px;
+	    color: white;
+	    background-color: white;
+	    padding: 5px;
+	    /*width: 100%;*/
+    }
+    footer a{
+	    color: rgb(117, 53, 54);
+    }
+    footer p{
+        background-color: black;
+        padding:20px;
+	}
+	#footer-call{
+		list-style-type: none;
+		text-decoration:underline;
+		color:white;
+	}
+    .contacts-footer{
     	display: block;
     	margin-top: 5%;
-	    margin-left: 27%;
-    }*/
-}
-@media only screen and (min-width: 520px) and (max-width: 740px){
-	.second-cakes img{
-    	background-color: rgb(0,0,0, 0.7);
-    	padding: 10px;
-    	/*margin-left: 50px;*/
-    	margin-bottom: 2%;
-    	width:60%;/* 150px;*/
-    	max-width: 200px;
+	    /*margin-left: 27%;*/
     }
+    .contacts-footer ul{
+        display: grid;
+        grid-template-columns:33% 34% 33%;
+    }
+    .contacts-footer ul li{
+	    list-style-type: none;
+	    float: left;
+    }
+    .contacts-footer ul li a img{
+	    height: 50px;
+	    background:#fff;
+	    /*margin:20px;*/
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    .contacts-footer ul li img{
+	    height: 50px;
+	    background:#fff;
+	    /*margin:20px;*/
+	    border-radius: 50% 0% 55% 0%; 
+    }
+    a:hover{
+	    color: pink;
+	    text-shadow: 2px 2px 2px black;
+    }
+
 }
 
-@media only screen and (orientation: landscape) and (max-width: 826px) {
-  .second-cakes div{
-    	/*display: flex;
-    	flex: wrap;*/
-    	margin-top: 0px;
-    	margin-left: 10%;
+@media only screen and (min-width:540px){
+    .second-cakes div{
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 50% auto;
+        /*margin-left: 35px;*/
+        
+        
     }
+    .second-cakes div img{
+        margin-left: 0%;
+    }
+
 }

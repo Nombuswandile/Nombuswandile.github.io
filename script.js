@@ -7,26 +7,53 @@
 	var image = document.getElementById('image');
 	image.src = pics[index];
 	image.style.height = '330px';
+	image.style.opacity = 1;
+
+	function Next(){
+		index++;
+		
+		if(index > 2){
+			index = 0;
+			image.src = pics[index];
+			
+		
+		}else{
+			image.src = pics[index];
+			
+		    
+		}
+        
+	}
 
 
-//for them ham button
-function myFunction(x){
-    x.classList.toggle("change");
-    //var i = true;
-    var ham = document.getElementById('ham');
+	function Back(){
+		index--;
+
+		if(index < 0){
+			index = pics.length - 1;
+			image.src = pics[index];
+			
+		    
+		}else{
+			//index -= 1
+			image.src = pics[index];
+			
+		    
+		}
 	
-	//ham.addEventListener('click', function(){
-		var icons = document.getElementById('icons');
-		icons.style.marginTop = '40px';
+	}
 
-		ham.addEventListener('click', function(){
-			icons.style.marginTop = '-195px';
-			//remove eventlistener
-		})
-	//})
+
+var ham = document.getElementById('icons');
+
+function myFunction(x){
+	x.classList.toggle("change");
+	var x = ham;
+	x.classList.toggle("icons");
+	
 }
 
-setInterval(function(){
+/*setInterval(function(){
 	index++;
 	if(index >= 0 && index != 3 ){
 		//index++;
@@ -44,6 +71,6 @@ setInterval(function(){
 		/*image.style.height = '270px'; 
 		image.src = pics[0];
 		index = ;*/
-		alert("index :" + index);
+		/*alert("index :" + index);
 	}
-}, 5000)
+}, 5000)*/

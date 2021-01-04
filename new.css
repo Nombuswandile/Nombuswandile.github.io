@@ -95,6 +95,9 @@ header .gradient .container{
 	margin:3px;
 	background:#fff; 
 }
+header h1{
+	margin-top: 80px;
+}
 .contacts{
 	display: none;
 }
@@ -761,4 +764,10 @@ a:hover{
         margin-left: 0%;
     }
 
+}
+
+@media only screen and (max-width:284px){
+	.gradient > h1{
+		margin-top: 40px !important;
+	}
 }
